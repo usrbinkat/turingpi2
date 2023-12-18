@@ -1,0 +1,6 @@
+name: turingpi2
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: A Turing Pi 2 Microk8s Kubernetes Platform Pulumi IaC Monorepo
