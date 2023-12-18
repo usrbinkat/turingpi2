@@ -24,11 +24,11 @@ def create_konductor_deployment(name, image, replicas, k8s_provider):
     volumes = [VolumeArgs(name="tmp", empty_dir={})]
     volume_mounts = [VolumeMountArgs(name="tmp", mount_path="/tmp/tmp")]
     service_ports = [
-        ContainerPortArgs(name="http", container_port=8080),
         ContainerPortArgs(name="ssh", container_port=2222),
+        ContainerPortArgs(name="http", container_port=8080),
         ContainerPortArgs(name="mosh", container_port=6000),
-        ContainerPortArgs(name="vscode", container_port=7681),
-        ContainerPortArgs(name="hugo", container_port=1313)
+        ContainerPortArgs(name="hugo", container_port=1313),
+        ContainerPortArgs(name="vscode", container_port=7681)
     ]
 
     try:
