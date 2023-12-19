@@ -1,3 +1,6 @@
 environment:
   imports:
-    - turingpi2
+  - turingpi2
+config:
+  pulumi:tags:
+    owner: usrbinkat
